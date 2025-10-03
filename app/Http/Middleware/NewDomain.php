@@ -16,7 +16,7 @@ class NewDomain
     public function handle($request, Closure $next)
     {
         $host = request()->getHost();
-        if ($host === 'hadir.lawfaculty.unhas.ac.id') {
+        if ($host === 'hadir.test') {
             return $next($request);
         }else{
             return redirect()->route('new-domain');

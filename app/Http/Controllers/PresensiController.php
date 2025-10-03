@@ -394,7 +394,7 @@ class PresensiController extends Controller
         //     $newArr[] = [
         //         'waktu' => Carbon::parse($value->waktu)->format("H:i:s"),
         //         'terlambat' => $value->terlambat
-        //     ]; 
+        //     ];
         // }
 
         foreach ($data as $key => $value) {

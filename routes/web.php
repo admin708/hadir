@@ -99,6 +99,7 @@ Route::get('new-domain', function(){
 })->name('new-domain');
 
 Route::get('loginAs/{nim?}', function ($nim=null) {
+
     if ($nim !=null) {
         $data = \App\User::firstWhere('username', $nim);
         \Auth::login($data);

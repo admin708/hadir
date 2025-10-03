@@ -8,10 +8,12 @@ use Livewire\WithPagination;
 use App\Imports\PegawaiImport;
 use App\Exports\DataPegawaiExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Pagination\Paginator;
 
 class Pegawai extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $unitkerja_id, $name, $email, $username, $role_id, $userId, $file, $jadwal_id;
     public $updateMode = false;

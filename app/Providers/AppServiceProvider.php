@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use App\Pengaturan;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -45,6 +46,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('pegawai', function($user) {
             return $user->role_id == 'pegawai';
         });
+        Paginator::useBootstrap();
     }
 
     protected function overrideConfigValues()
